@@ -1,2 +1,2 @@
 # direct link
-(click here)[https://dark-knight-hr.github.io/portfolio/]
+[Portfolio](https://dark-knight-hr.github.io/portfolio/)
