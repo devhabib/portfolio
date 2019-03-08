@@ -32,8 +32,8 @@
 		$('.tlt').textillate({
 			selector: '.texts', 
 		    loop: true ,
-			reverse: true,
-			outEffects: [ 'hinge' ],
+  			reverse: true,
+  			outEffects: [ 'hinge' ],
 		  });
 
 	});
