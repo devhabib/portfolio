@@ -95,6 +95,7 @@ header {
 .logo a {
     font-size: 30px;
     color: #fff;
+    -webkit-transition:.3s;
     transition: .3s;
 }
 .logo a:hover {
@@ -117,6 +118,7 @@ nav ul li a {
     font-size: 17px;
     text-transform: capitalize;
     font-weight: 400;
+    -webkit-transition:.3s;
     transition: .3s;
 }
 nav ul li a:hover{
@@ -128,11 +130,6 @@ nav ul li a:hover{
 .progress {
     border-radius: 25px;
     margin-bottom: 20px;
-}
-.progress-bar {
-    background: #000428;
-    background: -webkit-linear-gradient(to right, #004e92, #000428);
-    background: linear-gradient(to right, #004e92, #000428);
 }
 /*progress bar ends*/
 .btn.btn-success {
@@ -146,7 +143,7 @@ nav ul li a:hover{
     overflow: hidden;
     padding: 10px 40px;
 }
-.btn.btn-success::before {
+.btn.btn-success:before {
     position: absolute;
     content: '';
     width: 100%;
@@ -158,6 +155,7 @@ nav ul li a:hover{
     z-index: -1;
     background: #2C3E50;
     background: -webkit-linear-gradient(to right, #4CA1AF, #2C3E50);
+    background: -webkit-linear-gradient(left, #4CA1AF, #2C3E50);
     background: linear-gradient(to right, #4CA1AF, #2C3E50);
 }
 .btn-success:hover {
@@ -170,11 +168,7 @@ nav ul li a:hover{
     top: 0;
     left: 0;
 }
-.btn-success:not(:disabled):not(.disabled).active, .btn-success:not(:disabled):not(.disabled):active, .show > .btn-success.dropdown-toggle {
-    background: #000428;
-    background: -webkit-linear-gradient(to right, #004e92, #000428);
-    background: linear-gradient(to right, #004e92, #000428);
-}
+
 
 .home_content .btn-success, #contact .btn-success {
     color: #fff;
@@ -214,7 +208,8 @@ nav ul li a:hover{
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
     font-weight: 800;
     font-size: 75px;
     color: #ddd;
@@ -240,9 +235,6 @@ nav ul li a:hover{
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: #000428;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #004e92, #000428);
-    background: linear-gradient(to right, #004e92, #000428);
     top: 0;
     left: 0;
 }
@@ -342,6 +334,7 @@ nav ul li a:hover{
     background-color: #fff;
 }
 .contact-details ul li a {
+    -webkit-transition:.3s;
     transition: .3s;
 }
 .contact-details ul li a:hover {
@@ -358,6 +351,7 @@ nav ul li a:hover{
     border-radius: 10px;
     padding: 40px;
     overflow: hidden;
+    -webkit-transition:.3s;
     transition: .3s;
     position: relative;
 }
@@ -372,22 +366,20 @@ nav ul li a:hover{
     font-size: 35px;
     color: #ddd;
 }
-.single_services::before {
+.single_services:before {
     position: absolute;
     content: '';
-    background: #000428;
-    background: -webkit-linear-gradient(to right, #004e92, #000428);
-    background: linear-gradient(to right, #004e92, #000428);
     width: 100%;
     height: 2px;
     top: 0;
     left: -100%;
+    -webkit-transition:.3s;
     transition: .3s;
 }
 
-.single_services:hover::before {
+.single_services:hover:before {
     left: 0;
-    transition: ;
+    -webkit-transition:.3s;
     transition: .3s;
 }
 .skill_name p {
@@ -437,15 +429,13 @@ nav ul li a:hover{
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: #000428;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #004e92, #000428);
-    background: linear-gradient(to right, #004e92, #000428);
     top: 0;
     left: 0;
 }
 #contact .section-title h1 {
     color: #fff;
-}#contact .section-title h1 span {
+}
+#contact .section-title h1 span {
     color: #000428;
 }
 .form-control {
@@ -457,9 +447,10 @@ nav ul li a:hover{
 #contact .btn-success{
     color: #fff
 }
-footer{
-    background: #000428;  /* fallback for old browsers */
+footer, #contact::before, .progress-bar, .btn-success:not(:disabled):not(.disabled).active, .btn-success:not(:disabled):not(.disabled):active, .show > .btn-success.dropdown-toggle, #home::before, .single_services:before {
+    background: #000428;
     background: -webkit-linear-gradient(to right, #004e92, #000428);
+    background: -webkit-linear-gradient(left, #004e92, #000428);
     background: linear-gradient(to right, #004e92, #000428);
  
 }
@@ -469,4 +460,3 @@ footer p {
     text-transform: capitalize;
     font-weight: 100;
 }
-
