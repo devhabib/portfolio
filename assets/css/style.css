@@ -409,9 +409,51 @@ nav ul li a:hover{
     font-weight: 300;
     color: #2c3e50;
 }
-.single_work img {
+.work_img {
+    position: relative;
+    transition: .3s;
+}
+.work_img::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+    transition: .3s;
+    transform: scale(0);
+    visibility: hidden;
+}
+.work_img a:hover {
+    text-decoration: none;
+    color: #fab1a0;
+}
+.work_img img {
+    display: block;
     width: 100%;
     margin: 15px 0 10px 0;
+}
+.work_img:hover:before{
+    transform: scale(1);
+    visibility: visible;
+}
+.work_img a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    transform: scale(0);
+    visibility: hidden;
+    transition: .3s;
+}
+.work_img:hover a {
+    transform: scale(1);
+    visibility: visible;
+    transform: translate(-50%, -50%);
 }
 #contact {
     background-image: url('../img/my/bg3.jpg');
@@ -444,10 +486,14 @@ nav ul li a:hover{
     border-bottom: 1px dashed #fff;
     margin-bottom: 30px;
 }
+.form-control:focus {
+    color: #fff;
+    background-color: transparent;
+}
 #contact .btn-success{
     color: #fff
 }
-footer, #contact::before, .progress-bar, .btn-success:not(:disabled):not(.disabled).active, .btn-success:not(:disabled):not(.disabled):active, .show > .btn-success.dropdown-toggle, #home::before, .single_services:before {
+footer, #contact::before, .progress-bar, .btn-success:not(:disabled):not(.disabled).active, .btn-success:not(:disabled):not(.disabled):active, .show > .btn-success.dropdown-toggle, #home::before, .single_services:before, .work_img:before {
     background: #000428;
     background: -webkit-linear-gradient(to right, #004e92, #000428);
     background: -webkit-linear-gradient(left, #004e92, #000428);
@@ -460,3 +506,4 @@ footer p {
     text-transform: capitalize;
     font-weight: 100;
 }
+
