@@ -444,7 +444,6 @@ nav ul li a:hover{
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 20px;
-    font-size: ;
     font-weight: 700;
     color: #fff;
     transform: scale(0);
@@ -486,6 +485,10 @@ nav ul li a:hover{
     border-style: none;
     border-bottom: 1px dashed #fff;
     margin-bottom: 30px;
+}
+.form-control:focus {
+    color: #fff;
+    background-color: transparent;
 }
 #contact .btn-success{
     color: #fff
